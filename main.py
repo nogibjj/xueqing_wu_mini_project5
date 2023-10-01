@@ -1,11 +1,6 @@
 """
 ETL-Query script
 """
-
-from mylib.extract import extract
-from mylib.transform_load import load
-
-"""handles cli commands"""
 import sys
 import argparse
 from mylib.extract import extract

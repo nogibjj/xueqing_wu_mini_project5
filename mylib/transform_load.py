@@ -11,11 +11,14 @@ def load(dataset="data/US_births_2000-2014_SSA.csv"):
     payload = csv.reader(open(dataset, newline=""), delimiter=",")
     # skips the header of csv
     next(payload)
-    conn = sqlite3.connect("Birth.db") # create a new db called Birth.db, save it as a cursor/variable as conn
+    conn = sqlite3.connect("Birth.db") 
+    # create a new db called Birth.db,
+    # save it as a cursor/variable as conn
     c = conn.cursor() # use c to execute any actions
     c.execute("DROP TABLE IF EXISTS Birth")
     c.execute( # insert SQL queries to transform data (create/modify the table)
-        # Create the structure of data--assign the column name and the type of data for this column
+    # Create the structure of data--assign the column name 
+    # and the type of data for this column
         """
         CREATE TABLE Birth (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
