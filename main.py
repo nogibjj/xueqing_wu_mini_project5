@@ -33,20 +33,18 @@ def handle_arguments(args):
     print(args.action)
     if args.action == "update_record":
         parser.add_argument("id", type=int)
-        parser.add_argument("Year",  type=int)
+        parser.add_argument("Year", type=int)
         parser.add_argument("Month", type=int)
         parser.add_argument("Day_Of_Month", type=int)
         parser.add_argument("Day_Of_Week", type=int)
         parser.add_argument("Births", type=int)
-
 
     if args.action == "create_record":
-        parser.add_argument("Year",  type=int)
+        parser.add_argument("Year", type=int)
         parser.add_argument("Month", type=int)
         parser.add_argument("Day_Of_Month", type=int)
         parser.add_argument("Day_Of_Week", type=int)
         parser.add_argument("Births", type=int)
-
 
     if args.action == "general_query":
         parser.add_argument("query")
